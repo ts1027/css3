@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>伪类选择器</title>
+</head>
+<style>
+	input:focus{
+		border: 1px dashed #009494;
+	}
+	p{
+		width: 300px;
+		height: 600px;
+		padding: 100px;
+		border: 1px solid #000
+	}
+	p:first-line{
+		background: #ccc
+	}
+	p:first-letter{
+		color: #009494;
+		font-size: 80px;
+	}
+	
+	ul{
+		width: 600px;
+		border:1px solid #999;
+	}
+	li{
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+		background: pink;
+		float: left;
+	}
+	.clf:after{
+		content: "”";
+		display: block;
+		clear: both;
+	}
+	.clf:before{
+		content: "“";
+		display: block;
+		clear: both;
+	}
+</style>
+<body>
+	<input type="text" placeholder="输入你的用户名">
+	<input type="password" placeholder="输入你的密码">
+	<p>后代选择器
+	list li:only-child      选中list中唯一一个li子元素
+	list :only-child         选中list中唯一一个子元素
+	</p>
+
+	<ul class="clf">
+		<li>01</li>
+		<li>02</li>
+		<li>03</li>
+		<li>04</li>
+		<li>05</li>
+		<li>01</li>
+		<li>02</li>
+		<li>03</li>
+		<li>04</li>
+		<li>05</li>
+	</ul>
+
+
+	<!-- 跳转链接 -->
+	<a href="aa.html">我是a链接</a>
+	<a href="aa.html#teo">我是跳转的链接</a>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>同辈元素</title>
+</head>
+<style>
+	li+p{
+		background: orange;
+	}
+	p~li{
+		background: lime
+	}
+	li:first-of-type{
+		color: red
+	};
+	p:only-of-type{
+		background: #000
+	}
+	li:nth-of-type(4){
+		width: 300px;
+		background: #ccc;
+	}
+	li:nth-last-of-type(3){
+		background: purple;
+	}
+</style>
+<body>
+	<ul>
+		<li>01</li>
+		<li>02</li>
+		<li>03</li>
+		<p>我是p</p>
+		<li>04</li>
+		<li>05</li>
+		<p>我是p1</p>
+		<li>06</li>
+		<li>07</li>
+		<b>我是b标签</b>
+		<li>08</li>
+	</ul>
+	<ul>
+		<li>我是唯一的</li>
+		<li>我是唯一的</li>
+	</ul>
+</body>
+</html>

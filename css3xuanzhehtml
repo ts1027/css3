@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择器</title>
+</head>
+<style>
+
+	ul li:nth-last-child(3){
+		background:red;
+	}
+	ul :empty{
+		background:#009494;
+	}
+
+	ul :only-child{   
+		background: pink
+	}
+
+	ul :nth-child(3){
+		background: #000
+	}
+	/*优先级最低*/
+	ul p{
+		background: #66ce99
+	}
+</style>
+<body>
+	<ul>
+		<li>01</li>
+		<li>02
+			<p>发大水</p>
+		</li>
+
+		<li>03</li>
+		<p>发生</p>
+		<li>04</li>
+		<li>05</li>
+		<li>06</li>
+	</ul>
+	<ul>
+		<li>只有一个</li>
+	</ul>
+</body>
+</html>
